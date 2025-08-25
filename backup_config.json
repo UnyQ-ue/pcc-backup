@@ -1,0 +1,14 @@
+{
+  "FTP_SERVER": "u438584-sub16.your-storagebox.de",
+  "FTP_USER": "u438584-sub16",
+  "FTP_PASS": "$+nxzP8.*.E[QvN",
+  "BACKUP_PATH": "/",
+  "SOURCE_DIRS": [
+    "C:\\PC-CASH twsin HP",
+    "C:\\PC-CASH twi"
+  ],
+  "MAX_SIZE": "10GB",
+  "TIMEOUT_SECONDS": 240,
+  "UPLOAD_MAX_RETRIES": 3,
+  "LOG_PATH": "C:\\BackupLogs\\backup.log"
+}
