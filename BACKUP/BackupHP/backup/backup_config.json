@@ -1,0 +1,14 @@
+{
+    "FTP_SERVER": "u438584-sub.your-storagebox.de",
+    "FTP_USER": "u438584-sub",
+    "FTP_PASS": "password",
+    "BACKUP_PATH": "/",
+    "SOURCE_DIRS": [
+        "C:\\PC-CASH twin HP",
+        "C:\\PC-CASH twin"
+    ],
+    "MAX_SIZE": "10GB",
+    "TIMEOUT_SECONDS": 7200,
+    "UPLOAD_MAX_RETRIES": 3,
+    "LOG_PATH": "C:\\BackupLogs\\backup.log"
+}
