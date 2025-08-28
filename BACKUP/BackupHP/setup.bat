@@ -81,15 +81,6 @@ if %errorlevel% equ 0 (
   echo Please run this script as Administrator to create scheduled tasks
 )
 
-
-echo Füge Regel für ftp.exe zur Windows-Firewall hinzu...
-
-netsh advfirewall firewall add rule name="FTP Allow Public" ^
-    dir=in action=allow program="C:\Windows\System32\ftp.exe" enable=yes profile=public
-
-echo Regel erfolgreich hinzugefügt.
-
-
 :end
 echo Setup complete!
 pause
