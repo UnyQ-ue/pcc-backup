@@ -9,7 +9,7 @@ Nach der Ausführung von setup.exe werden Scriptis Dateien ins C:\Scripts kopier
 =============================================================
 BACKUP-HP SETUP
 =============================================================
-1. In der Firewall muss man die Datei C:\Windows\System32\ftp.exe freigeben und auf ‚Öffentlich‘ stellen.
+1. In der Firewall (nicht erweitert) muss man die Datei C:\Windows\System32\ftp.exe freigeben und auf ‚Öffentlich‘ stellen.
 
 2. Im Ordner backupHP befindet sich ein Unterordner namens backup, der alle Skripte zur Ausführung des Backup-Prozesses sowie die Konfigurationsdateien enthält.
 Falls keine backup_config.json vorhanden ist, starte backup.exe, um eine Beispielkonfiguration zu erstellen, und passe diese anschließend an deine Anforderungen an.
