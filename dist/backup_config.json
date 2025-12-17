@@ -8,9 +8,9 @@
     "C:\\Backup\\Test1"
   ],
   "MAX_SIZE": "10GB",
-  "TIMEOUT_SECONDS": 7200,
+  "TIMEOUT_SECONDS": 240,
   "UPLOAD_MAX_RETRIES": 3,
   "LOG_PATH": "C:\\BackupLogs\\backup.log",
-  "RESTART_TIME": 30,
+  "RESTART_TIME": 0,
   "RESTART_APPLICATION": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 }

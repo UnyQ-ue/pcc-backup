@@ -22,7 +22,9 @@ if not os.path.exists('backup_config.json'):
         "MAX_SIZE": "10GB",
         "TIMEOUT_SECONDS": 7200,
         "UPLOAD_MAX_RETRIES": 3,
-        "LOG_PATH": "C:\\BackupLogs\\backup.log"
+        "LOG_PATH": "C:\\BackupLogs\\backup.log",
+        "RESTART_TIME": 30,
+        "RESTART_APPLICATION": ""
     }
     with open('backup_config.json', 'w', encoding='utf-8') as f:
         json.dump(default_config, f, indent=4, ensure_ascii=False)
@@ -45,6 +47,8 @@ max_size = config['MAX_SIZE']
 timeout_seconds = config['TIMEOUT_SECONDS']
 upload_max_retries = config['UPLOAD_MAX_RETRIES']
 log_path = config['LOG_PATH']
+restart_time = config['RESTART_TIME']
+restart_application = config['RESTART_APPLICATION']
 
 os.makedirs(os.path.dirname(log_path), exist_ok=True)
 
@@ -227,7 +231,19 @@ os.remove(zip_filename)
 ftp.quit()
 
 log(f"Backup script completed in {time.time() - start_time:.2f} seconds.")
+log("Backup completed successfully.")
 
-restartIn = 30  # seconds
-log(f"Backup completed successfully. Restarting the computer in {restartIn} seconds...")
-os.system(f"shutdown /r /t {restartIn}")
+# Verhalten abhängig von restart_time
+if restart_time == 0:
+    if restart_application.strip():
+        log(f"Restart time = 0. Starting application: {restart_application}")
+        try:
+            os.startfile(restart_application)
+            log(f"Application '{restart_application}' started successfully.")
+        except Exception as e:
+            log(f"Failed to start application '{restart_application}': {e}")
+    else:
+        log("Restart time = 0 and no restart application specified. Nothing to do.")
+else:
+    log(f"Restarting the computer in {restart_time} seconds...")
+    os.system(f"shutdown /r /t {restart_time}")
